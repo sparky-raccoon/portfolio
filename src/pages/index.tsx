@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
       <div className={styles.wrapper}>
         <div className={styles.commonSection}>
-          <div className={styles.commonImage}><Image src={underSeasJpg} alt="Under seas monster" /></div>
+          <div className={styles.commonImage}><Image src={underSeasJpg} alt="Under seas monster" priority /></div>
           <div className={styles.commonText}>
             <Heading isFake>anicolydelsa ✺</Heading>
             <span>7E7</span>
@@ -45,7 +45,7 @@ export default function Home() {
             </header>
           <main className={styles.main}>
             <figure className={styles.homeFigure}>
-              <Image src={archelonJpg} alt="Archelon skull" />
+              <Image src={archelonJpg} alt="Archelon skull" priority />
               <figcaption>fig 1. archelon skull</figcaption>
             </figure>
           </main>
