@@ -21,7 +21,7 @@ export default function Home() {
           <div className={styles.commonImage}><Image src={underSeasJpg} alt="Under seas monster" priority /></div>
           <div className={styles.commonText}>
             <Heading isFake>anicolydelsa ✺</Heading>
-            <span>7E7</span>
+            <span className={styles.hexaYear}>7E7</span>
           </div>
         </div>
         <div className={styles.pageSection}>
@@ -44,13 +44,15 @@ export default function Home() {
               </div>
             </header>
           <main className={styles.main}>
-            <figure className={styles.homeFigure}>
-              <Image src={archelonJpg} alt="Archelon skull" priority />
-              <figcaption>fig 1. archelon skull</figcaption>
-            </figure>
+            <div className={styles.homeFigureWrapper}>
+              <figure className={styles.homeFigure}>
+                <Image src={archelonJpg} alt="Archelon skull" priority />
+                <figcaption>fig 1. archelon skull</figcaption>
+              </figure>
+            </div>
           </main>
           <footer className={styles.footer}>
-            <p>
+            <p className={styles.credits}>
               Portfolio 2023<br />
               Code, design & contents are my own<br />
               SSG with NextJs, fonts provided by WOMXN collective

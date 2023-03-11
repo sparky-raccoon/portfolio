@@ -1,8 +1,10 @@
 .wrapper {
   display: flex;
   height: 100vh;
+  min-height: 700px;
   
   --header-height: 88px;
+  --footer-height: var(--header-height);
   --common-img-width: 328px;
   --common-text-width: 128px;
   --common-text-width-xs: 64px;
@@ -10,10 +12,10 @@
 
 .main {
   margin-top: 88px;
-  height: calc(100% - var(--header-height));
+  height: calc(100% - var(--header-height) - var(--footer-height));
+  padding: 32px;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .header {
@@ -106,8 +108,16 @@
   position: relative;
 }
 
+.homeFigureWrapper {
+  display: flex;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
 .homeFigure {
-  width: 80%;
+  width: 60%;
 }
 
 .homeFigure img {
@@ -121,7 +131,14 @@
   position: absolute;
   bottom: 0;
   width: 100%;
+  height: var(--footer-height);
   padding: 8px;
+}
+
+.credits {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 }
 
 .externalLinks {
@@ -136,6 +153,12 @@
 
 .externalLinks *:first-child {
   margin-right: 8px;
+}
+
+@media (max-height: 549px) {
+  .hexaYear {
+    visibility: hidden;
+  }
 }
 
 @media (max-width: 1000px) {
