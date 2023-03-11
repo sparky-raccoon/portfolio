@@ -1,9 +1,13 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import { Space_Mono } from '@next/font/google'
-import localFont from '@next/font/local'
+import Layout from '@/components/layout';
+import { useRouter } from 'next/router';
 
 const spaceMonoFont = Space_Mono({ weight: ["400", "700"], subsets: ['latin'] });
 export default function App({ Component, pageProps }: AppProps) {
-  return <div className={spaceMonoFont.className}><Component {...pageProps} /></div>
+  const router = useRouter();
+  return <Layout className={spaceMonoFont.className} routerPathName={router.pathname}>
+    <Component {...pageProps} />
+  </Layout>
 }
