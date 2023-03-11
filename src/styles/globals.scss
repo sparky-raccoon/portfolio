@@ -1,6 +1,17 @@
 :root {
   --foreground-color: #000;
   --background-color: #E5E1D9;
+    
+  // Layout
+  --header-height: 88px;
+  --common-img-width: 328px;
+  --common-text-width: 128px;
+  --common-text-width-xs: 64px;
+
+  // Index
+  --footer-height: 88px;
+  --footer-height-xs: 124px;
+  --footer-height-xxs: 158px;
 }
 
 * {

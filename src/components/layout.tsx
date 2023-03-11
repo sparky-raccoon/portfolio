@@ -1,10 +1,10 @@
-import { useState, ReactNode, ReactEventHandler } from 'react';
+import { ReactNode } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import Image from 'next/image';
 import Heading from '@/components/heading';
 import underSeasJpg from '../../public/images/permanent/underseas.jpg';
-import styles from '@/styles/layout.module.css';
+import styles from '@/styles/layout.module.scss';
 
 const LINK_LABELS: { [ key: string ]: string } = {
   about: 'about',
@@ -32,18 +32,18 @@ export default function Layout({ children, className, routerPathName }: { childr
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <div className={styles.wrapper}>
-          <div className={styles.commonSection}>
-            <div className={styles.commonImage}>{
+          <div className={styles.sideSection}>
+            <div className={styles.imageWrapper}>{
               currentPathName === '' && <Image src={underSeasJpg} alt="Under seas monster" priority />
             }</div>
-            <div className={styles.commonText}>
+            <div className={styles.textWrapper}>
               <Heading isFake>anicolydelsa ✺</Heading>
               <span className={styles.hexaYear}>7E7</span>
             </div>
           </div>
-          <div className={styles.pageSection}>
-            <header className={styles.header}>
-                <div className={styles.pageTitle}>
+          <div className={styles.mainSection}>
+            <header>
+                <div className={styles.titles}>
                   <Heading level={1}><Link href="/">anicolydelsa</Link></Heading>
                   <span>/</span>
                   <Heading id="layout-path-heading" level={2} useBodyFont>{LINK_LABELS[currentPathName] || 'home'}</Heading>
