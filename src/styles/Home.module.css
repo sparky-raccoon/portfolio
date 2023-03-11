@@ -1,10 +1,12 @@
 .wrapper {
   display: flex;
   height: 100vh;
-  min-height: 700px;
+  min-height: 600px;
   
   --header-height: 88px;
-  --footer-height: var(--header-height);
+  --footer-height: 88px;
+  --footer-height-xs: 124px;
+  --footer-height-xxs: 158px;
   --common-img-width: 328px;
   --common-text-width: 128px;
   --common-text-width-xs: 64px;
@@ -79,7 +81,7 @@
 }
 
 .commonText {
-  width: var(--common-text-width);;
+  width: var(--common-text-width);
   height: 100%;
   border-right: 1px solid black;
   position: relative;
@@ -180,7 +182,13 @@
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 1400px) {
+  .homeFigure {
+    width: 80%;
+  }
+}
+
+@media (max-width: 500px) {
   .pageTitle h1 {
     position: absolute;
     top: -9999px;
@@ -190,12 +198,20 @@
     width: var(--common-text-width-xs);
   }
 
+  .commonText *:first-child {
+    font-size: 32px;
+  }
+
   .commonText *:last-child {
     font-size: 12px;
   }
 
   .header, .pageSection {
     width: calc(100% - var(--common-text-width-xs));
+  }
+
+  .pageTitle span {
+    margin-right: 0;
   }
 
   .pageSection {
@@ -210,5 +226,40 @@
   .externalLinks *:first-child {
     margin-right: 0;
     margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 420px) {
+  .main {
+    height: calc(100% - var(--header-height) - var(--footer-height-xs));
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    height: var(--footer-height-xs);
+    align-items: flex-start;
+  }
+
+  .externalLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 16px;
+  }
+
+  .externalLinks *:first-child {
+    margin-right: 8px;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 280px) {
+  .main {
+    height: calc(100% - var(--header-height) - var(--footer-height-xxs));
+  }
+
+  .footer {
+    height: var(--footer-height-xxs);
   }
 }
