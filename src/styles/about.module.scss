@@ -1,0 +1,42 @@
+.main {
+    margin-top: var(--header-height);
+    height: calc(100% - var(--header-height));
+    display: flex;
+    flex-direction: column;
+
+    p {
+        padding: 24px;
+        border-bottom: 1px solid black;
+    }
+
+    .images {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-grow: 1;
+
+        span {
+            height: 100%;
+            display: block;
+            border-right: 0.5px solid black;
+        }
+
+        .figureWrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 24px;
+
+            figure {
+                width: 100%;
+    
+                img {
+                    mix-blend-mode: multiply;
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

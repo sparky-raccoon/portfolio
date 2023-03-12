@@ -1,5 +1,5 @@
 .main {
-  margin-top: 88px;
+  margin-top: var(--header-height);
   height: calc(100% - var(--header-height) - var(--footer-height));
   padding: 32px;
   display: flex;
