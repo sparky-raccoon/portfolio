@@ -55,6 +55,8 @@
 		margin-left: 456px;
 		width: calc(100% - 456px);
 		position: relative;
+		display: flex;
+		flex-direction: column;
 
 		header {
 			height: var(--header-height);
