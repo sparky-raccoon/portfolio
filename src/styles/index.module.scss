@@ -35,47 +35,9 @@
     flex-direction: column;
   }
 
-  .externalLinks {
-    display: flex;
-    align-items: flex-end;
-
-    a {
-      width: 24px;
-      height: 24px;
-    }
-
-    *:first-child {
-      margin-right: 8px;
-    }
-  }
-
-  @media (max-width: 500px) {
-    .externalLinks {
-      flex-direction: column;
-      justify-content: flex-end;
-  
-      *:first-child {
-        margin-right: 0;
-        margin-bottom: 8px;
-      }
-    }
-  }
-
   @media (max-width: 420px) {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
-    .externalLinks {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin-top: 16px;
-
-      *:first-child {
-        margin-right: 8px;
-        margin-bottom: 0;
-      }
-    }
   }
 }

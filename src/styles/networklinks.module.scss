@@ -1,0 +1,41 @@
+.externalLinks {
+	display: flex;
+	align-items: flex-end;
+
+	a {
+		width: 24px;
+		height: 24px;
+	}
+
+	*:first-child {
+		margin-right: 8px;
+	}
+
+	@media (max-width: 500px) {
+    flex-direction: column;
+		justify-content: flex-end;
+
+		*:first-child {
+			margin-right: 0;
+			margin-bottom: 8px;
+		}
+  }
+
+	@media (max-width: 420px) {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin-top: 16px;
+
+		*:first-child {
+			margin-right: 8px;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.fixed {
+	position: fixed;
+	bottom: 8px;
+	right: 8px;
+}

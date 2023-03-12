@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import NetworkLinks from '@/components/networklinks';
 import selfieJpg from '../../public/images/permanent/selfie.jpg';
 import ectodermalJpg from '../../public/images/permanent/ectodermal_cells.jpg';
 import styles from '@/styles/about.module.scss';
@@ -7,10 +8,10 @@ export default function About() {
     return (
         <main className={styles.main}>
             <p className={styles.introduction}>
-            je suis une artiste développeuse qui sévit à Paris depuis quelques années, prête à prendre ses bagages pour élever des moutons avant que le monde n’explose.<br/>
-j’ai passé mon enfance dans une littérature trop obscure pour mon âge. ma mère n’aime pas mes dessins.<br/>
-je cherche à mêler différents médiums et représentations symboliques de formes humaines & moins humaines en investissant peu à peu l’art numérique. mes inspirations se trouvent dans l’ésotérisme, la science et la psyché.<br/>
-pour toute question, ou collaboration sur un projet, envoyez-moi un email : <span>anicolydelsa@gmail.com</span>
+                je suis une artiste développeuse qui sévit à Paris depuis quelques années, prête à prendre ses bagages pour élever des moutons avant que le monde n’explose.<br />
+                j’ai passé mon enfance dans une littérature trop obscure pour mon âge.<br />
+                je cherche à mêler différents médiums et représentations symboliques de formes humaines & moins humaines en investissant peu à peu l’art numérique. mes inspirations se trouvent dans l’ésotérisme, la science et la psyché.<br />
+                pour toute question ou collaboration sur un projet, envoyez-moi un email : <a className={styles.email} href="mailto:anicolydelsa@gmail.com">anicolydelsa@gmail.com</a>
             </p>
             <div className={styles.images}>
                 <div className={styles.figureWrapper}>
@@ -27,6 +28,7 @@ pour toute question, ou collaboration sur un projet, envoyez-moi un email : <spa
                     </figure>
                 </div>
             </div>
+            <NetworkLinks fixed />
         </main>
     );
 };
